@@ -82,3 +82,60 @@ thumbnails.forEach((thumbnail, index) => {
     highlightedLink.href = certData[index].link;
   });
 });
+
+// Project Data
+const projects = [
+  {
+    title: "Weather App",
+    description:
+      "A Node.js-based weather app that displays real-time weather data.",
+    link: "https://github.com/yourusername/weather-app",
+    techStack: [
+      "Node.js",
+      "Express",
+      "OpenWeather API",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio website built with modern web technologies.",
+    link: "https://github.com/yourusername/portfolio-website",
+    techStack: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+  },
+  {
+    title: "Trading Bot",
+    description: "An automated trading bot for options trading using Python.",
+    link: "https://github.com/yourusername/trading-bot",
+    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "API Integration"],
+  },
+  // Add more project objects here
+];
+
+// Function to Display Project Details
+function showProjectDetails(index) {
+  const projectTitle = document.getElementById("project-title");
+  const projectDescription = document.getElementById("project-description");
+  const projectLink = document.getElementById("project-link");
+  const techStackContainer = document.getElementById("project-tech-stack");
+  const techStackList = document.getElementById("tech-stack-list");
+
+  // Update project details
+  projectTitle.textContent = projects[index].title;
+  projectDescription.textContent = projects[index].description;
+  projectLink.href = projects[index].link;
+  projectLink.style.display = "inline-block";
+
+  // Update tech stack
+  techStackList.innerHTML = ""; // Clear previous list
+  projects[index].techStack.forEach((tech) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = tech;
+    techStackList.appendChild(listItem);
+  });
+
+  techStackContainer.style.display = "block"; // Show tech stack section
+}
