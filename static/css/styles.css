@@ -174,6 +174,7 @@ body {
   font-weight: 300; /* Light font weight for readability */
   line-height: 1.6; /* Add line spacing for better readability */
   color: var(--text-color); /* Theme-based text color */
+  text-align: justify;
 }
 
 /* Section Style */
@@ -556,8 +557,8 @@ body {
 /* Styling for project title (buttons) */
 .project-thumbnail {
   padding: 10px 15px; /* Padding inside the title */
-  background: var(--arrow-color); /* Background color based on theme */
-  color: var(--bg-color); /* Text color based on theme */
+  background: var(--navbar-color); /* Background color based on theme */
+  color: var(--navbar-text); /* Text color based on theme */
   text-align: center; /* Center align text */
   cursor: pointer; /* Pointer cursor for clickable titles */
   transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
@@ -566,14 +567,14 @@ body {
 /* Hover effect for project title */
 .project-thumbnail:hover {
   transform: scale(1.025); /* Slightly enlarge title on hover */
-  background: var(--navbar-color); /* Change background on hover */
-  color: var(--navbar-text); /* Change text color on hover */
+  background: var(--bg-color); /* Change background on hover */
+  color: var(--arrow-color); /* Change text color on hover */
 }
 
 /* Hover effect for project title */
 .project-thumbnail.active {
-  background: var(--navbar-color); /* Change background on hover */
-  color: var(--navbar-text); /* Change text color on hover */
+  background: var(--bg-color); /* Change background on hover */
+  color: var(--arrow-color); /* Change text color on hover */
 }
 
 /* Rounded corners for the first and last project titles */
@@ -608,6 +609,12 @@ body {
   font-size: 1.1rem; /* Font size for description */
   line-height: 1.6; /* Line height for readability */
   flex-grow: 1;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.project-details p::-webkit-scrollbar {
+  display: none;
 }
 
 /* Styling for the tech stack section */
@@ -618,7 +625,7 @@ body {
 /* Title for the tech stack section */
 #project-tech-stack h3 {
   font-size: 1.4rem; /* Font size for tech stack title */
-  margin-bottom: 10px; /* Space below the title */
+  margin-bottom: 2.5px; /* Space below the title */
 }
 
 /* Styling for the tech stack list */
@@ -690,6 +697,7 @@ body {
   }
 
   .project-details p {
+    margin: 0 50px;
     font-size: 1rem; /* Adjust paragraph font size */
   }
 }
@@ -754,6 +762,10 @@ body {
   .contact-icon {
     width: 40px; /* Slightly reduce the icon size */
     height: 40px; /* Adjust height for responsiveness */
+  }
+
+  .project-details p {
+    margin: 0 20px;
   }
 }
 
