@@ -9,7 +9,10 @@
   <body>
     <!-- Navbar -->
     <div class="navbar">
-      <ul>
+      <button class="menu-toggle">
+        <img src="/images/menu.png" alt="Menu" />
+      </button>
+      <ul class="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#certifications">Certifications</a></li>
@@ -27,11 +30,13 @@
       {{>contact}}
     </div>
 
+
     <!-- Theme Toggle Button -->
     <button class="theme-toggle">
       <img src="/images/night.png" alt="Theme Icon" class="theme-icon" />
     </button>
 
     <script src="/js/script.js"></script>
+    <script src="/js/data.js"></script>
   </body>
 </html>
