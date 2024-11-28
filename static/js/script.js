@@ -54,7 +54,7 @@ menuToggle.addEventListener("click", () => {
 window.addEventListener("load", () => {
   // Check if the current URL has a hash fragment
   if (window.location.hash) {
-    window.location.href = "http://localhost:8080/"; // Redirect to homepage if hash exists
+    window.location.href = "/"; // Redirect to homepage if hash exists
   }
 });
 
